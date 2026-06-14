@@ -3,30 +3,30 @@
 [![GitHub][img-github]][url-github]
 [![Modrinth][img-modrinth]][url-modrinth]
 
-Пак специально создан для комфортной игры с большим количеством модов при высоком FPS и минимальном лаге даже в длительных сессиях.
+Fastorio is a modpack specially designed for comfortable gameplay with a large number of mods while maintaining high FPS and minimal lag even during long sessions.
 
-## Ключевые особенности
+## Key Features
 
-- **Оптимизация на первом месте** — тщательно настроенная конфигурация
-- Производительность, ориентированная на длительную игру
-- Сбалансированная нагрузка на систему
-- Улучшения качества жизни без лишнего контента
-- Организованные системы и настройки
-- Поддержка дальнейших обновлений и расширений
+- **Optimization First** — carefully tuned configuration
+- Performance focused on long play sessions
+- Balanced system load
+- Quality-of-life improvements without unnecessary content
+- Well-organized systems and settings
+- Support for future updates and expansions
 
-## Скачивание
+## Download
 
 [![GitHub][img-github]][url-github]
 [![Modrinth][img-modrinth]][url-modrinth]
 
-> Загружая Fastorio, вы соглашаетесь с условиями лицензии и лицензиями включённых модов.
+> By downloading Fastorio, you agree to the license terms and the licenses of the included mods.
 
-## Установка
+## Installation
 
-1. Установите совместимый лаунчер Minecraft.
-2. Скачайте пак Fastorio с выбранной платформы.
-3. Импортируйте пак или откройте инстанс.
-4. Запустите игру один раз, чтобы сгенерировались все конфиги.
+1. Install a compatible Minecraft launcher.
+2. Download the Fastorio modpack from your chosen platform.
+3. Import the pack or create a new instance.
+4. Launch the game once to generate all configuration files.
 
 <!-- Images -->
 [img-github]: https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white
