@@ -1,0 +1,13 @@
+name = "NeoToolTipFix"
+filename = "neotooltipfix-1.2.1-26.2.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/6zODptkY/versions/GgcB7D50/neotooltipfix-1.2.1-26.2.jar"
+hash-format = "sha512"
+hash = "d19fca51aa70806c63a06ab92a018f429fef9e30ce5446b7c7f815e5213af6802fb0532f84979ecd3bda96ffd7069066611044872ef63cb38206174c1cb2a7ea"
+
+[update]
+[update.modrinth]
+mod-id = "6zODptkY"
+version = "GgcB7D50"

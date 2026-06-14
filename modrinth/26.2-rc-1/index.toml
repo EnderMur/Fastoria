@@ -1,0 +1,56 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "30beb7bc5382ee9bba330f2783c6ec899996779daa503e81f4e83be19839982b"
+metafile = true
+
+[[files]]
+file = "mods/clickthrough+.pw.toml"
+hash = "9d87690aab9b299e25bc37c3c55bbf433d706c0f222e7c17ce72a77035dc84ed"
+metafile = true
+
+[[files]]
+file = "mods/clientsort.pw.toml"
+hash = "1eb538dc4262667e70cf35ce6f509bad45d74120c887a1bdd42f65cd51e41c1c"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "d1ea8276f475d6afd129a81a201ac2b21b6c3116842ef12289be68220a3ee935"
+metafile = true
+
+[[files]]
+file = "mods/fastserverpings.pw.toml"
+hash = "9db8aecc12a2e2109fc35b1ca6e2cf93bc5ea1055d2715ba3bf00adad0a53d04"
+metafile = true
+
+[[files]]
+file = "mods/ixeris.pw.toml"
+hash = "ebfbcc7918e351b5bc3f7685b66b85aa8d70061464abbd08efb2c2562e6e4df9"
+metafile = true
+
+[[files]]
+file = "mods/neotooltipfix.pw.toml"
+hash = "8ceae46c3894d145ed56d174c485495d3120757348418d49b98db93c211c7fde"
+metafile = true
+
+[[files]]
+file = "mods/rrv.pw.toml"
+hash = "0162502272ed377d46da7dfecea806cac59350374f2e2c0a582dba6d03290a54"
+metafile = true
+
+[[files]]
+file = "mods/scalablelux.pw.toml"
+hash = "8635a6f88d0f0e9487299a0da5507bb9f1685969a8b02772efdba6df3d9c0afa"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "53b25ea0db1bf810d90bbc69d816decfb2cfe2a758e059d42f15fa7d596bee7a"
+metafile = true
+
+[[files]]
+file = "mods/wi-zoom.pw.toml"
+hash = "9cd9c86543426bdce7191bc70a1ccbf068095cd171f44b3be8c939469659a659"
+metafile = true
