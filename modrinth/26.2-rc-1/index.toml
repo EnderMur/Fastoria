@@ -31,6 +31,11 @@ hash = "ebfbcc7918e351b5bc3f7685b66b85aa8d70061464abbd08efb2c2562e6e4df9"
 metafile = true
 
 [[files]]
+file = "mods/ksyxis.pw.toml"
+hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
+metafile = true
+
+[[files]]
 file = "mods/neotooltipfix.pw.toml"
 hash = "8ceae46c3894d145ed56d174c485495d3120757348418d49b98db93c211c7fde"
 metafile = true
