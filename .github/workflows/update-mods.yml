@@ -1,0 +1,117 @@
+name: Weekly mod update check
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'
+  workflow_dispatch:
+
+jobs:
+  update-mods:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install packwiz
+        run: |
+          curl -L -o packwiz https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64
+          chmod +x packwiz
+          sudo mv packwiz /usr/local/bin/
+
+      - name: Update mods and generate report
+        id: update
+        run: |
+          python3 << 'PYEOF' > update_report.md
+          import os, subprocess, re, sys
+          from pathlib import Path
+          import tomllib
+
+          base_dir = Path("modrinth")
+          report_lines = []
+          any_changes = False
+
+          for version_dir in sorted(base_dir.iterdir()):
+              if not version_dir.is_dir():
+                  continue
+              pack_toml = version_dir / "pack.toml"
+              if not pack_toml.exists():
+                  continue
+
+              version = version_dir.name
+              mods_dir = version_dir / "mods"
+              if not mods_dir.is_dir():
+                  continue
+
+              old_versions = {}
+              for mod_file in mods_dir.glob("*.pw.toml"):
+                  try:
+                      with open(mod_file, "rb") as f:
+                          data = tomllib.load(f)
+                      name = data.get("name") or mod_file.stem
+                      ver = data.get("version") or "?"
+                      old_versions[name] = ver
+                  except Exception:
+                      continue
+
+              result = subprocess.run(
+                  ["packwiz", "update", "--all", "--yes"],
+                  cwd=version_dir,
+                  capture_output=True,
+                  text=True
+              )
+              if result.returncode != 0:
+                  print(f"⚠️ Ошибка при обновлении версии {version}: {result.stderr}", file=sys.stderr)
+                  continue
+
+              new_versions = {}
+              for mod_file in mods_dir.glob("*.pw.toml"):
+                  try:
+                      with open(mod_file, "rb") as f:
+                          data = tomllib.load(f)
+                      name = data.get("name") or mod_file.stem
+                      ver = data.get("version") or "?"
+                      new_versions[name] = ver
+                  except Exception:
+                      continue
+
+              updated = []
+              for mod_name, new_ver in new_versions.items():
+                  old_ver = old_versions.get(mod_name, "—")
+                  if old_ver != new_ver:
+                      updated.append((mod_name, old_ver, new_ver))
+
+              if updated:
+                  any_changes = True
+                  report_lines.append(f"## Minecraft {version}\n")
+                  report_lines.append("| Мод | Старая версия | Новая версия |")
+                  report_lines.append("|-----|---------------|--------------|")
+                  for name, old, new in updated:
+                      report_lines.append(f"| {name} | {old} | {new} |")
+                  report_lines.append("")
+              else:
+                  report_lines.append(f"## Minecraft {version} – обновлений нет\n")
+
+          if not any_changes:
+              print("Нет изменений ни в одной версии.", file=sys.stderr)
+              with open("update_report.md", "w") as f:
+                  f.write("")
+              sys.exit(0)
+
+          with open("update_report.md", "w", encoding="utf-8") as f:
+              f.write("\n".join(report_lines))
+          print("Отчёт сохранён в update_report.md")
+          PYEOF
+
+      - name: Create Pull Request if there are changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "⬆️ Update mods (weekly automatic check)"
+          branch: auto-mod-update
+          delete-branch: true
+          title: "🔄 Автоматическое обновление модов"
+          body-path: update_report.md
+          base: main
