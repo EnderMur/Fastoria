@@ -14,6 +14,7 @@ body:
       label: "Версия Minecraft / Modpack version"
       description: "Укажите точную версию Minecraft и модпака. / Provide the exact Minecraft and modpack version."
       placeholder: "Например: 1.20.2, Modpack v1.0.0 / Example: 1.20.2, Modpack v1.0.0"
+    validations:
       required: true
   - type: dropdown
     id: loader
@@ -29,6 +30,7 @@ body:
           value: "Forge"
         - label: "Другой / Other"
           value: "Другой"
+    validations:
       required: true
   - type: textarea
     id: logs
@@ -36,6 +38,7 @@ body:
       label: "Логи / Logs"
       description: "Вставьте crash-report, latest.log или ссылку на них. / Paste the crash report, latest.log, or a link to them."
       placeholder: "Приложите содержимое crash-report или ссылку на файл. / Attach crash report content or a link to the file."
+    validations:
       required: true
   - type: textarea
     id: steps
@@ -43,6 +46,7 @@ body:
       label: "Шаги воспроизведения / Reproduction steps"
       description: "Опишите шаги, которые привели к ошибке. / Describe the steps that led to the issue."
       placeholder: "1. ... 2. ... 3. ..."
+    validations:
       required: true
   - type: textarea
     id: screenshots
@@ -50,11 +54,11 @@ body:
       label: "Скриншоты / видео / Screenshots / Video"
       description: "Прикрепите скриншоты или ссылку на видео, если есть. / Attach screenshots or a video link if available."
       placeholder: "Ссылка на изображение или видео / Image or video link"
-      required: false
   - type: textarea
     id: hardware
     attributes:
       label: "Системные параметры / Hardware"
       description: "Укажите RAM, версию Java и другие системные параметры. / Provide RAM, Java version, and other system details."
       placeholder: "Например: 16GB RAM, Java 17, Windows 11 / Example: 16GB RAM, Java 17, Windows 11"
+    validations:
       required: true
