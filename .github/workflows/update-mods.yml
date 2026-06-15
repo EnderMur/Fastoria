@@ -16,39 +16,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
       - name: Update mods and generate report
         id: update
         run: |
-          python3 << 'PYEOF'
-          import os, subprocess, sys, urllib.request, json, stat
+          python3 << 'PYEOF' > update_report.md
+          import os, subprocess, sys
           from pathlib import Path
           import tomllib
-
-          packwiz_path = "/usr/local/bin/packwiz"
-          if not os.path.isfile(packwiz_path):
-              print("Скачиваем packwiz...")
-              api_url = "https://api.github.com/repos/packwiz/packwiz/releases/latest"
-              token = os.environ.get("GITHUB_TOKEN")
-              if not token:
-                  print("Ошибка: GITHUB_TOKEN не найден")
-                  sys.exit(1)
-              req = urllib.request.Request(api_url)
-              req.add_header("Authorization", f"Bearer {token}")
-              req.add_header("Accept", "application/vnd.github+json")
-              with urllib.request.urlopen(req) as resp:
-                  data = json.load(resp)
-              assets = data.get("assets", [])
-              download_url = None
-              for asset in assets:
-                  if asset["name"] == "packwiz-linux-amd64":
-                      download_url = asset["browser_download_url"]
-                      break
-              if not download_url:
-                  print("Не удалось найти packwiz-linux-amd64 в релизе")
-                  sys.exit(1)
-              urllib.request.urlretrieve(download_url, packwiz_path)
-              os.chmod(packwiz_path, os.stat(packwiz_path).st_mode | stat.S_IEXEC)
-              print("packwiz установлен")
 
           base_dir = Path("modrinth")
           report_lines = []
@@ -78,7 +60,7 @@ jobs:
                       continue
 
               result = subprocess.run(
-                  [packwiz_path, "update", "--all"],
+                  ["packwiz", "update", "--all"],
                   cwd=version_dir,
                   input="y\n",
                   capture_output=True,
@@ -124,8 +106,6 @@ jobs:
           with open("update_report.md", "w", encoding="utf-8") as f:
               f.write("\n".join(report_lines))
           PYEOF
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request if changes found
         if: steps.update.outputs.any_changes == 'true'
