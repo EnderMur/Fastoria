@@ -1,0 +1,54 @@
+name: "Запрос функции / Feature Request"
+description: "Предложение нового мода, QoL-улучшения или изменения в конфигах. Suggest a new mod, QoL improvement, or config change."
+title: "[FEATURE] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Пожалуйста, заполните весь доступный раздел на русском и английском. / Please fill out the entire form in Russian and English.
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Категория / Category"
+      description: "Выберите тип предложения. / Select the type of suggestion."
+      options:
+        - label: "Новый мод / New Mod"
+          value: "new_mod"
+        - label: "QoL улучшение / QoL Improvement"
+          value: "qol"
+        - label: "Изменение конфига / Config Change"
+          value: "config"
+        - label: "Другое / Other"
+          value: "other"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Описание / Description"
+      description: "Опишите вашу идею подробно. / Describe your idea in detail."
+      placeholder: "Расскажите о том, что вы хотите добавить и почему. / Tell us what you want to add and why."
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Причина / Reason"
+      description: "Объясните, как это улучшит модпак. / Explain how this will improve the modpack."
+      placeholder: "Какие проблемы это решает? Какую ценность это добавляет? / What problems does it solve? What value does it add?"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Альтернативы / Alternatives"
+      description: "Существуют ли похожие моды или решения? / Are there similar mods or solutions?"
+      placeholder: "Список похожих модов или функций. / List of similar mods or features."
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Дополнительная информация / Additional Information"
+      description: "Ссылки, скриншоты или другой контекст. / Links, screenshots, or other context."
+      placeholder: "Ссылка на мод на CurseForge, Modrinth и т.д. / Link to mod on CurseForge, Modrinth, etc."
