@@ -18,13 +18,7 @@ jobs:
 
       - name: Install packwiz
         run: |
-          API_URL="https://api.github.com/repos/packwiz/packwiz/releases/latest"
-          DOWNLOAD_URL=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" "$API_URL" | jq -r '.assets[] | select(.name == "packwiz-linux-amd64") | .browser_download_url')
-          if [ -z "$DOWNLOAD_URL" ] || [ "$DOWNLOAD_URL" = "null" ]; then
-            echo "Не удалось получить URL для скачивания packwiz"
-            exit 1
-          fi
-          curl -L -o packwiz "$DOWNLOAD_URL"
+          curl -L -H "User-Agent: GitHubActions" -o packwiz https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64
           chmod +x packwiz
           sudo mv packwiz /usr/local/bin/
 
