@@ -26,7 +26,7 @@ jobs:
         id: update
         run: |
           python3 << 'PYEOF' > update_report.md
-          import os, subprocess, re, sys
+          import os, subprocess, sys
           from pathlib import Path
           import tomllib
 
@@ -58,8 +58,9 @@ jobs:
                       continue
 
               result = subprocess.run(
-                  ["packwiz", "update", "--all", "--yes"],
+                  ["packwiz", "update", "--all"],
                   cwd=version_dir,
+                  input="y\n",
                   capture_output=True,
                   text=True
               )
@@ -96,17 +97,16 @@ jobs:
                   report_lines.append(f"## Minecraft {version} – обновлений нет\n")
 
           if not any_changes:
-              print("Нет изменений ни в одной версии.", file=sys.stderr)
               with open("update_report.md", "w") as f:
                   f.write("")
               sys.exit(0)
 
           with open("update_report.md", "w", encoding="utf-8") as f:
               f.write("\n".join(report_lines))
-          print("Отчёт сохранён в update_report.md")
           PYEOF
 
-      - name: Create Pull Request if there are changes
+      - name: Create Pull Request if changes found
+        if: steps.update.outputs.any_changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "⬆️ Update mods (weekly automatic check)"
