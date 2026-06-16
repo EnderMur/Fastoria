@@ -7,11 +7,11 @@ First release.
 Add:
 * Ksyxis
 
-### 26.2-rc-2.1.0.0 (2026-06-16)
+### 26.2-rc-2-1.0.0 (2026-06-16)
 
 First release.
 
-### 26.2-rc-1.1.0.0 (2026-06-14)
+### 26.2-rc-1-1.0.0 (2026-06-14)
 
 First release. Containing:
 
