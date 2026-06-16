@@ -16,6 +16,11 @@ hash = "1eb538dc4262667e70cf35ce6f509bad45d74120c887a1bdd42f65cd51e41c1c"
 metafile = true
 
 [[files]]
+file = "mods/disable-fog.pw.toml"
+hash = "1180c9ebca3fcbf6fbdd475df0ebb82cebad9168fcc3518196b249a35ada3519"
+metafile = true
+
+[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "85777703d4901e4483d45b614a45615737bee231d786f1166ea37466abd6bd33"
 metafile = true
