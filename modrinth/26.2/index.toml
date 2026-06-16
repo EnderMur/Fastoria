@@ -74,3 +74,8 @@ metafile = true
 file = "mods/wi-zoom.pw.toml"
 hash = "80cb92a3048f4809ddcbf94b280434003362df0d7f82cdf0b90fd2e31addf54c"
 metafile = true
+
+[[files]]
+file = "mods/xxl-packets.pw.toml"
+hash = "4569552c042289be27ec6efc416061304ef408398e54e2e9e800fe101422a1dd"
+metafile = true
