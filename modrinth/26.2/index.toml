@@ -41,6 +41,11 @@ hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
 metafile = true
 
 [[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "81642bd635a669b8b0edaaadfcb8665789ddd344f9bcea45193ee2d93815457e"
+metafile = true
+
+[[files]]
 file = "mods/neotooltipfix.pw.toml"
 hash = "8ceae46c3894d145ed56d174c485495d3120757348418d49b98db93c211c7fde"
 metafile = true

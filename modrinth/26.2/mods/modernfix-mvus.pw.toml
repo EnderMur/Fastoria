@@ -1,0 +1,13 @@
+name = "ModernFix-mVUS"
+filename = "modernfix-5.27.7-build.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/TjSm1wrD/versions/PwwAXPGv/modernfix-5.27.7-build.1.jar"
+hash-format = "sha512"
+hash = "59ff12f42dfecfd9f79744b8dbe5d4f03ef983b0cfecc27c2ce0c7622a5468287c138afe523ceae0f0efd2ada6a42437a10a612a1938d2bdbf74480dfc079bcb"
+
+[update]
+[update.modrinth]
+mod-id = "TjSm1wrD"
+version = "PwwAXPGv"
