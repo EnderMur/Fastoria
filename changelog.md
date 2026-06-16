@@ -1,3 +1,8 @@
+### 26.2-1.1.0 (2026-06-16)
+Add:
+* ModernFix
+* Disable Foq
+
 ### 26.2-1.0.0 (2026-06-16)
 
 First release.
