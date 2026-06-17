@@ -1,0 +1,63 @@
+name: Create modpack release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create release notes
+        id: notes
+        run: |
+          python3 << 'PYEOF'
+          import os
+          import re
+          from pathlib import Path
+
+          changelog_path = Path("changelog.md")
+          content = changelog_path.read_text(encoding="utf-8")
+          match = re.search(r"^###\s+(.+?)\s+\((\d{4}-\d{2}-\d{2})\)\n(.*?)(?=^###\s|\Z)", content, re.MULTILINE | re.DOTALL)
+          if not match:
+              raise SystemExit("No release entry found in changelog.md")
+
+          tag = match.group(1).strip()
+          body = match.group(3).strip()
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"tag={tag}\n")
+              f.write("body<<EOF\n")
+              f.write(body + "\n")
+              f.write("EOF\n")
+          PYEOF
+
+      - name: Skip if release exists
+        id: exists
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ steps.notes.outputs.tag }}" > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub release
+        if: steps.exists.outputs.exists == 'false'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ steps.notes.outputs.tag }}" \
+            --title "${{ steps.notes.outputs.tag }}" \
+            --notes "${{ steps.notes.outputs.body }}"

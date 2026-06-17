@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -25,18 +27,24 @@ jobs:
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
 
-      - name: Update mods and generate report
+      - name: Update mods and prepare changelog
         id: update
         run: |
           python3 << 'PYEOF'
-          import os, subprocess, sys
+          import os
+          import subprocess
+          import sys
+          from datetime import date
           from pathlib import Path
           import tomllib
 
+          def read_toml(path: Path):
+              with open(path, "rb") as f:
+                  return tomllib.load(f)
+
           def read_mod_state(mod_file: Path):
               try:
-                  with open(mod_file, "rb") as f:
-                      data = tomllib.load(f)
+                  data = read_toml(mod_file)
               except Exception:
                   return None
 
@@ -49,18 +57,37 @@ jobs:
                   "version": modrinth.get("version") or "?",
               }
 
+          def bump_patch(version: str) -> str:
+              parts = version.split(".")
+              if len(parts) != 3 or not all(part.isdigit() for part in parts):
+                  raise ValueError(f"Unsupported version format: {version}")
+              parts[2] = str(int(parts[2]) + 1)
+              return ".".join(parts)
+
+          def set_pack_version(pack_toml: Path, old_version: str, new_version: str):
+              content = pack_toml.read_text(encoding="utf-8")
+              target = f'version = "{old_version}"'
+              replacement = f'version = "{new_version}"'
+              if target not in content:
+                  raise ValueError(f"Version string not found in {pack_toml}")
+              pack_toml.write_text(content.replace(target, replacement, 1), encoding="utf-8")
+
           base_dir = Path("modrinth")
-          report_lines = []
-          any_changes = False
+          all_updates = []
+          release_notes = []
+          bumped_versions = []
 
           for version_dir in sorted(base_dir.iterdir()):
               if not version_dir.is_dir():
                   continue
+
               pack_toml = version_dir / "pack.toml"
               if not pack_toml.exists():
                   continue
 
-              version = version_dir.name
+              pack_data = read_toml(pack_toml)
+              minecraft_version = (pack_data.get("versions") or {}).get("minecraft", version_dir.name)
+              pack_version = pack_data.get("version")
               mods_dir = version_dir / "mods"
               if not mods_dir.is_dir():
                   continue
@@ -68,80 +95,99 @@ jobs:
               old_versions = {}
               for mod_file in mods_dir.glob("*.pw.toml"):
                   state = read_mod_state(mod_file)
-                  if state is None:
-                      continue
-                  old_versions[state["name"]] = state
+                  if state is not None:
+                      old_versions[state["name"]] = state
 
-              # Обновляем моды
               result = subprocess.run(
                   ["packwiz", "update", "--all"],
                   cwd=version_dir,
                   input="y\n",
                   capture_output=True,
-                  text=True
+                  text=True,
               )
               if result.returncode != 0:
-                  print(f"⚠️ Ошибка при обновлении версии {version}: {result.stderr}", file=sys.stderr)
-                  continue
+                  print(f"Error updating {version_dir.name}: {result.stderr}", file=sys.stderr)
+                  sys.exit(result.returncode)
 
               subprocess.run(["packwiz", "refresh"], cwd=version_dir, check=True)
 
-              # Считываем новые версии
               new_versions = {}
               for mod_file in mods_dir.glob("*.pw.toml"):
                   state = read_mod_state(mod_file)
-                  if state is None:
-                      continue
-                  new_versions[state["name"]] = state
+                  if state is not None:
+                      new_versions[state["name"]] = state
 
               updated = []
-              for mod_name, new_state in new_versions.items():
+              for mod_name, new_state in sorted(new_versions.items()):
                   old_state = old_versions.get(mod_name)
                   if old_state is None:
-                      updated.append((mod_name, "—", new_state["version"], "—", new_state["filename"]))
+                      updated.append((mod_name, "-", new_state["version"]))
                       continue
 
                   if old_state["filename"] != new_state["filename"] or old_state["version"] != new_state["version"]:
-                      updated.append((
-                          mod_name,
-                          old_state["version"],
-                          new_state["version"],
-                          old_state["filename"],
-                          new_state["filename"],
-                      ))
+                      updated.append((mod_name, old_state["version"], new_state["version"]))
 
-              if updated:
-                  any_changes = True
-                  report_lines.append(f"## Minecraft {version}\n")
-                  report_lines.append("| Мод | Старая версия | Новая версия | Старый файл | Новый файл |")
-                  report_lines.append("|-----|---------------|--------------|-------------|------------|")
-                  for name, old_ver, new_ver, old_file, new_file in updated:
-                      report_lines.append(f"| {name} | {old_ver} | {new_ver} | {old_file} | {new_file} |")
-                  report_lines.append("")
-              else:
-                  report_lines.append(f"## Minecraft {version} — обновлений нет\n")
+              if not updated:
+                  continue
 
-          # Передаём результат в GitHub Actions
-          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
-              f.write(f"any_changes={str(any_changes).lower()}\n")
+              new_pack_version = bump_patch(pack_version)
+              set_pack_version(pack_toml, pack_version, new_pack_version)
+              bumped_versions.append((version_dir.name, minecraft_version, pack_version, new_pack_version))
+
+              release_notes.append(f"## Minecraft {minecraft_version}")
+              for mod_name, old_ver, new_ver in updated:
+                  line = f"- {mod_name} ({old_ver} -> {new_ver})"
+                  all_updates.append((minecraft_version, line))
+                  release_notes.append(line)
+              release_notes.append("")
+
+          any_changes = bool(all_updates)
+
+          output_path = Path(os.environ["GITHUB_OUTPUT"])
+          with output_path.open("a", encoding="utf-8") as f:
+              f.write(f"any_changes={'true' if any_changes else 'false'}\n")
 
           if not any_changes:
-              with open("update_report.md", "w", encoding="utf-8") as f:
-                  f.write("Обновлений модов не найдено.")
               sys.exit(0)
 
-          with open("update_report.md", "w", encoding="utf-8") as f:
-              f.write("\n".join(report_lines))
+          changelog_path = Path("changelog.md")
+          current_changelog = changelog_path.read_text(encoding="utf-8") if changelog_path.exists() else ""
+          today = date.today().isoformat()
+          latest_tag = ""
+          if bumped_versions:
+              primary_version_dir, primary_minecraft, old_ver, new_ver = bumped_versions[0]
+              latest_tag = f"{primary_version_dir}-{new_ver}"
+              changelog_lines = [f"### {latest_tag} ({today})", "Update:"]
+              for minecraft_version, line in all_updates:
+                  prefix = f"[{minecraft_version}] " if len(bumped_versions) > 1 else ""
+                  changelog_lines.append(f"* {prefix}{line[2:]}")
+              changelog_lines.append("")
+              new_changelog = "\n".join(changelog_lines)
+              changelog_path.write_text(new_changelog + current_changelog, encoding="utf-8")
+
+          pr_body_lines = ["Автоматическое обновление модов.", ""]
+          for version_dir_name, minecraft_version, old_ver, new_ver in bumped_versions:
+              pr_body_lines.append(f"- `{version_dir_name}`: `{old_ver}` -> `{new_ver}`")
+          pr_body_lines.append("")
+          pr_body_lines.extend(release_notes[:-1] if release_notes and not release_notes[-1] else release_notes)
+
+          pr_body = "\n".join(pr_body_lines).strip()
+
+          with output_path.open("a", encoding="utf-8") as f:
+              f.write("pr_body<<EOF\n")
+              f.write(pr_body + "\n")
+              f.write("EOF\n")
           PYEOF
 
       - name: Create Pull Request if changes found
         if: steps.update.outputs.any_changes == 'true'
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "⬆️ Update mods (weekly automatic check)"
           branch: auto-mod-update
           delete-branch: true
           title: "🔄 Автоматическое обновление модов"
-          body-path: update_report.md
+          body: ${{ steps.update.outputs.pr_body }}
           base: main
           labels: mod-update
