@@ -1,3 +1,10 @@
+### 26.2-1.2.1 (2026-06-17)
+# Update
+* Sodium (sodium-fabric-0.9.0-beta.3+mc26.2r1.jar -> sodium-fabric-0.9.0+mc26.2.jar)
+
+### 26.2-rc-2-1.0.1 (2026-06-17)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.2-rc-2-0.4.0-alpha.0.33.jar -> c2me-fabric-mc26.2-rc-2-0.4.1-alpha.0.0.jar)
 ### 26.2-1.2.0 (2026-06-17)
 Add:
 * LambDynamicLights
