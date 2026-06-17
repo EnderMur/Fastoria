@@ -21,6 +21,14 @@ Fastorio is a modpack specially designed for comfortable gameplay with a large n
 
 > By downloading Fastorio, you agree to the license terms and the licenses of the included mods.
 
+## Version Support
+
+| Version | Supported | Notes |
+|---------|-----------|-------|
+| `26.2` | 🟢 | Current stable version |
+| `26.2-rc-1` | 🔴 | Release candidate, no longer supported |
+| `26.2-rc-2` | 🔴 | Release candidate, no longer supported |
+
 ## Installation
 
 1. Install a compatible Minecraft launcher.

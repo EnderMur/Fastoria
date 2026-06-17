@@ -1,0 +1,16 @@
+{
+  "versions": [
+    {
+      "name": "26.2",
+      "supported": true
+    },
+    {
+      "name": "26.2-rc-1",
+      "supported": false
+    },
+    {
+      "name": "26.2-rc-2",
+      "supported": false
+    }
+  ]
+}

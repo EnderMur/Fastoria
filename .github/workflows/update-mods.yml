@@ -32,6 +32,7 @@ jobs:
         run: |
           python3 << 'PYEOF'
           import os
+          import json
           import subprocess
           import sys
           from datetime import date
@@ -41,6 +42,40 @@ jobs:
           def read_toml(path: Path):
               with open(path, "rb") as f:
                   return tomllib.load(f)
+
+          def load_supported_versions(path: Path):
+              try:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+              except FileNotFoundError:
+                  raise ValueError(f"Missing versions file: {path}")
+              except json.JSONDecodeError as exc:
+                  raise ValueError(f"Invalid JSON in {path}: {exc}") from exc
+
+              versions = data.get("versions")
+              if not isinstance(versions, list):
+                  raise ValueError(f"Expected 'versions' list in {path}")
+
+              supported_versions = set()
+              seen_versions = set()
+
+              for entry in versions:
+                  if not isinstance(entry, dict):
+                      raise ValueError(f"Each version entry must be an object in {path}")
+
+                  name = entry.get("name")
+                  supported = entry.get("supported")
+                  if not isinstance(name, str) or not name:
+                      raise ValueError(f"Each version entry must have a non-empty string 'name' in {path}")
+                  if not isinstance(supported, bool):
+                      raise ValueError(f"Version '{name}' must have a boolean 'supported' in {path}")
+                  if name in seen_versions:
+                      raise ValueError(f"Duplicate version entry '{name}' in {path}")
+
+                  seen_versions.add(name)
+                  if supported:
+                      supported_versions.add(name)
+
+              return supported_versions
 
           def read_mod_state(mod_file: Path):
               try:
@@ -73,12 +108,15 @@ jobs:
               pack_toml.write_text(content.replace(target, replacement, 1), encoding="utf-8")
 
           base_dir = Path("modrinth")
+          supported_versions = load_supported_versions(Path("versions.json"))
           changelog_entries = []
           release_notes = []
           bumped_versions = []
 
           for version_dir in sorted(base_dir.iterdir()):
               if not version_dir.is_dir():
+                  continue
+              if version_dir.name not in supported_versions:
                   continue
 
               pack_toml = version_dir / "pack.toml"
