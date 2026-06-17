@@ -1,0 +1,106 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/badoptimizations.pw.toml"
+hash = "8e6033c2642308835d119a073fdf24306394cdb6985c482a08e67b8087f6e90d"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "47dba1cbfb60a9a2de63a5e6d7c23b85d7b9651e4cb1ab870f4261cd565e3c7d"
+metafile = true
+
+[[files]]
+file = "mods/clickthrough+.pw.toml"
+hash = "9d87690aab9b299e25bc37c3c55bbf433d706c0f222e7c17ce72a77035dc84ed"
+metafile = true
+
+[[files]]
+file = "mods/clientsort.pw.toml"
+hash = "fff459aa49075067b7b84f3ceafa5271073fa4c22683e9df89f5896ba0f66391"
+metafile = true
+
+[[files]]
+file = "mods/disable-fog.pw.toml"
+hash = "711b6f725b086a713eb9cd02c69b3e46553db8f77486c117c04c9d33d9e23f02"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "120585e75f6fa06b138bbb3e681298113c66a084ebe842de3da91d21b5b5b3f9"
+metafile = true
+
+[[files]]
+file = "mods/fastserverpings.pw.toml"
+hash = "9db8aecc12a2e2109fc35b1ca6e2cf93bc5ea1055d2715ba3bf00adad0a53d04"
+metafile = true
+
+[[files]]
+file = "mods/ixeris.pw.toml"
+hash = "a826eb5620b44f763365baedb22075293191abf82b94353252c936f1e5e45959"
+metafile = true
+
+[[files]]
+file = "mods/ksyxis.pw.toml"
+hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
+hash = "4af50837d039d8b8a8857674033cbc87e90c441de2c296b2bd80a70ee04d3c96"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "cd37520fbb14b8d5e9471d8c25324736e02dcf3be4b7c5df1699757b2264049f"
+metafile = true
+
+[[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "79f15a14bc21c8983fcb698a8682e26e3702e723be996abd69b6dd70edd4dd00"
+metafile = true
+
+[[files]]
+file = "mods/morechathistory.pw.toml"
+hash = "6d505173f3abc478d4d961dbb6ba6e2c9d94ef2481c9d41bf0ce6279e5f132fb"
+metafile = true
+
+[[files]]
+file = "mods/mouse-tweaks.pw.toml"
+hash = "89fcae9fccf6aec59355405e1160ed15d523c34e08e555a0da6f46fb8a5087fe"
+metafile = true
+
+[[files]]
+file = "mods/neotooltipfix.pw.toml"
+hash = "4ef0c642166b0a78db16ced094635c6a570ec6888ceb250f07012f1c84c33087"
+metafile = true
+
+[[files]]
+file = "mods/rrv.pw.toml"
+hash = "95260879087a49630240cc2e8eb3d4983a80cc09cbd68fb751daf02718cabb9d"
+metafile = true
+
+[[files]]
+file = "mods/scalablelux.pw.toml"
+hash = "645be5d20d755e83c986014b768abbf473d3bf31da5dcd197af63c8b200cc141"
+metafile = true
+
+[[files]]
+file = "mods/sodium-extra.pw.toml"
+hash = "546965f1ab52fc464c51e36c52305fef231837c22454d22447b8423e379502cd"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "a699bfe2548067cd28d4a95d2c89a1d1ffa54fd5d90c19419f9037a8d6bf015a"
+metafile = true
+
+[[files]]
+file = "mods/wi-zoom.pw.toml"
+hash = "38546e60796576a31e8668628e5b0bd083343f19af3dd4fa9d0e662ed075c3eb"
+metafile = true
+
+[[files]]
+file = "mods/xxl-packets.pw.toml"
+hash = "4569552c042289be27ec6efc416061304ef408398e54e2e9e800fe101422a1dd"
+metafile = true

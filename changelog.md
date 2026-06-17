@@ -1,3 +1,6 @@
+### 26.1.x-1.0.0 (2026-06-17)
+First release.
+
 ### 26.2-1.2.1 (2026-06-17)
 # Update
 * Sodium (sodium-fabric-0.9.0-beta.3+mc26.2r1.jar -> sodium-fabric-0.9.0+mc26.2.jar)

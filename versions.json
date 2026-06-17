@@ -11,6 +11,10 @@
     {
       "name": "26.2-rc-2",
       "supported": false
+    },
+    {
+      "name": "26.1.x",
+      "supported": true
     }
   ]
 }
