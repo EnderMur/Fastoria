@@ -64,6 +64,12 @@ metafile = true
 file = "mods/morechathistory.pw.toml"
 hash = "6d505173f3abc478d4d961dbb6ba6e2c9d94ef2481c9d41bf0ce6279e5f132fb"
 metafile = true
+
+[[files]]
+file = "mods/mouse-tweaks.pw.toml"
+hash = "e37b46af7cfa8f24e9895c37789b43d80d8abe519becf4f08d9e1ea1529fc126"
+metafile = true
+
 [[files]]
 file = "mods/neotooltipfix.pw.toml"
 hash = "8ceae46c3894d145ed56d174c485495d3120757348418d49b98db93c211c7fde"
