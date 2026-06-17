@@ -1,3 +1,11 @@
+### 26.2-1.2.0 (2026-06-17)
+Add:
+* LambDynamicLights
+* XXL Packets
+* BadOptimizations
+* More Chat History
+* Mouse Tweaks
+
 ### 26.2-1.1.0 (2026-06-16)
 Add:
 * ModernFix
