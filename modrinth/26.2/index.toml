@@ -91,6 +91,11 @@ hash = "9c157cdcfc913259f508b629649114fb0ad1773b6caaccf512a9e6de7e5a6d38"
 metafile = true
 
 [[files]]
+file = "mods/rightclickharvest.pw.toml"
+hash = "c64ffa1cfce64e959e4f0ca90823f4bf0d1b94fcba5e2fdb413fed78447d7dcd"
+metafile = true
+
+[[files]]
 file = "mods/rrv.pw.toml"
 hash = "0162502272ed377d46da7dfecea806cac59350374f2e2c0a582dba6d03290a54"
 metafile = true
