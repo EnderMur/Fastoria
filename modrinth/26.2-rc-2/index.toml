@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "a01621f8f24c106f07c8d79f0146c10f9a8ccf0b55997163eb430f2efb82204b"
+hash = "161d89f5e42be2ffb27b19486f549f5bdefa0f44de9e95ff3473a40dcca7e8f7"
 metafile = true
 
 [[files]]
