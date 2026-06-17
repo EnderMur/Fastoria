@@ -1,3 +1,7 @@
+### 26.2-1.2.1 (2026-06-17)
+Update:
+* [26.2] Sodium (pBzGpoaN -> 3QgJXuSK)
+* [26.2-rc-2] Concurrent Chunk Management Engine (Fabric) (sM6fkHkG -> QidT45ly)
 ### 26.2-1.2.0 (2026-06-17)
 Add:
 * LambDynamicLights
