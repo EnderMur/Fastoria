@@ -73,7 +73,7 @@ jobs:
               pack_toml.write_text(content.replace(target, replacement, 1), encoding="utf-8")
 
           base_dir = Path("modrinth")
-          all_updates = []
+          changelog_entries = []
           release_notes = []
           bumped_versions = []
 
@@ -121,11 +121,11 @@ jobs:
               for mod_name, new_state in sorted(new_versions.items()):
                   old_state = old_versions.get(mod_name)
                   if old_state is None:
-                      updated.append((mod_name, "-", new_state["version"]))
+                      updated.append((mod_name, "-", new_state["filename"]))
                       continue
 
                   if old_state["filename"] != new_state["filename"] or old_state["version"] != new_state["version"]:
-                      updated.append((mod_name, old_state["version"], new_state["version"]))
+                      updated.append((mod_name, old_state["filename"], new_state["filename"]))
 
               if not updated:
                   continue
@@ -134,14 +134,15 @@ jobs:
               set_pack_version(pack_toml, pack_version, new_pack_version)
               bumped_versions.append((version_dir.name, minecraft_version, pack_version, new_pack_version))
 
-              release_notes.append(f"## Minecraft {minecraft_version}")
+              pack_tag = f"{version_dir.name}-{new_pack_version}"
+              changelog_entries.append((pack_tag, updated))
+              release_notes.append(f"## {pack_tag}")
               for mod_name, old_ver, new_ver in updated:
                   line = f"- {mod_name} ({old_ver} -> {new_ver})"
-                  all_updates.append((minecraft_version, line))
                   release_notes.append(line)
               release_notes.append("")
 
-          any_changes = bool(all_updates)
+          any_changes = bool(changelog_entries)
 
           output_path = Path(os.environ["GITHUB_OUTPUT"])
           with output_path.open("a", encoding="utf-8") as f:
@@ -153,16 +154,15 @@ jobs:
           changelog_path = Path("changelog.md")
           current_changelog = changelog_path.read_text(encoding="utf-8") if changelog_path.exists() else ""
           today = date.today().isoformat()
-          latest_tag = ""
-          if bumped_versions:
-              primary_version_dir, primary_minecraft, old_ver, new_ver = bumped_versions[0]
-              latest_tag = f"{primary_version_dir}-{new_ver}"
-              changelog_lines = [f"### {latest_tag} ({today})", "Update:"]
-              for minecraft_version, line in all_updates:
-                  prefix = f"[{minecraft_version}] " if len(bumped_versions) > 1 else ""
-                  changelog_lines.append(f"* {prefix}{line[2:]}")
-              changelog_lines.append("")
-              new_changelog = "\n".join(changelog_lines)
+          if changelog_entries:
+              changelog_blocks = []
+              for pack_tag, updated in changelog_entries:
+                  changelog_blocks.append(f"### {pack_tag} ({today})")
+                  changelog_blocks.append("# Update")
+                  for mod_name, old_ver, new_ver in updated:
+                      changelog_blocks.append(f"* {mod_name} ({old_ver} -> {new_ver})")
+                  changelog_blocks.append("")
+              new_changelog = "\n".join(changelog_blocks)
               changelog_path.write_text(new_changelog + current_changelog, encoding="utf-8")
 
           pr_body_lines = ["Автоматическое обновление модов.", ""]
