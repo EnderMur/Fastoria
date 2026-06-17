@@ -18,6 +18,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+          cache: false
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
       - name: Create missing GitHub releases
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -34,22 +43,54 @@ jobs:
           if not matches:
               raise SystemExit("No release entries found in changelog.md")
 
+          version_pattern = re.compile(r"^(?P<pack>.+)-(?P<version>\d+\.\d+\.\d+)$")
+          packwiz_path = str(Path.home() / "go" / "bin" / "packwiz")
+
           for match in matches:
-              tag = match.group(1).strip()
+              changelog_tag = match.group(1).strip()
               body = match.group(3).strip()
+              version_match = version_pattern.match(changelog_tag)
+              if not version_match:
+                  raise SystemExit(f"Unsupported changelog tag format: {changelog_tag}")
+
+              pack_dir = Path("modrinth") / version_match.group("pack")
+              if not pack_dir.is_dir():
+                  raise SystemExit(f"Pack directory not found: {pack_dir}")
+
+              release_tag = f"Fastoria-{changelog_tag}"
+              mrpack_name = f"{release_tag}.mrpack"
+              mrpack_path = Path.cwd() / mrpack_name
 
               exists = subprocess.run(
-                  ["gh", "release", "view", tag],
+                  ["gh", "release", "view", release_tag],
                   stdout=subprocess.DEVNULL,
                   stderr=subprocess.DEVNULL,
               )
               if exists.returncode == 0:
                   continue
 
+              export = subprocess.run(
+                  [packwiz_path, "modrinth", "export", "-o", str(mrpack_path)],
+                  cwd=pack_dir,
+                  text=True,
+              )
+              if export.returncode != 0:
+                  sys.exit(export.returncode)
+
+              if not mrpack_path.is_file():
+                  raise SystemExit(f"Exported file not found: {mrpack_path}")
+
               result = subprocess.run(
-                  ["gh", "release", "create", tag, "--title", tag, "--notes", body],
+                  [
+                      "gh", "release", "create", release_tag,
+                      "--title", release_tag,
+                      "--notes", body,
+                      str(mrpack_path),
+                  ],
                   text=True,
               )
               if result.returncode != 0:
                   sys.exit(result.returncode)
+
+              mrpack_path.unlink()
           PYEOF
