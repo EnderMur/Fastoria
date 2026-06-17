@@ -18,46 +18,38 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create release notes
-        id: notes
+      - name: Create missing GitHub releases
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python3 << 'PYEOF'
-          import os
           import re
+          import subprocess
+          import sys
           from pathlib import Path
 
           changelog_path = Path("changelog.md")
           content = changelog_path.read_text(encoding="utf-8")
-          match = re.search(r"^###\s+(.+?)\s+\((\d{4}-\d{2}-\d{2})\)\n(.*?)(?=^###\s|\Z)", content, re.MULTILINE | re.DOTALL)
-          if not match:
-              raise SystemExit("No release entry found in changelog.md")
+          matches = list(re.finditer(r"^###\s+(.+?)\s+\((\d{4}-\d{2}-\d{2})\)\n(.*?)(?=^###\s|\Z)", content, re.MULTILINE | re.DOTALL))
+          if not matches:
+              raise SystemExit("No release entries found in changelog.md")
 
-          tag = match.group(1).strip()
-          body = match.group(3).strip()
+          for match in matches:
+              tag = match.group(1).strip()
+              body = match.group(3).strip()
 
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
-              f.write(f"tag={tag}\n")
-              f.write("body<<EOF\n")
-              f.write(body + "\n")
-              f.write("EOF\n")
+              exists = subprocess.run(
+                  ["gh", "release", "view", tag],
+                  stdout=subprocess.DEVNULL,
+                  stderr=subprocess.DEVNULL,
+              )
+              if exists.returncode == 0:
+                  continue
+
+              result = subprocess.run(
+                  ["gh", "release", "create", tag, "--title", tag, "--notes", body],
+                  text=True,
+              )
+              if result.returncode != 0:
+                  sys.exit(result.returncode)
           PYEOF
-
-      - name: Skip if release exists
-        id: exists
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          if gh release view "${{ steps.notes.outputs.tag }}" > /dev/null 2>&1; then
-            echo "exists=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "exists=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Create GitHub release
-        if: steps.exists.outputs.exists == 'false'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          gh release create "${{ steps.notes.outputs.tag }}" \
-            --title "${{ steps.notes.outputs.tag }}" \
-            --notes "${{ steps.notes.outputs.body }}"
