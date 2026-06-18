@@ -71,6 +71,11 @@ hash = "81642bd635a669b8b0edaaadfcb8665789ddd344f9bcea45193ee2d93815457e"
 metafile = true
 
 [[files]]
+file = "mods/modmenu.pw.toml"
+hash = "5d5837e22eb02061c7f8f087b4d839a269d2e39a5149e4079bd0cf594724abfd"
+metafile = true
+
+[[files]]
 file = "mods/morechathistory.pw.toml"
 hash = "6d505173f3abc478d4d961dbb6ba6e2c9d94ef2481c9d41bf0ce6279e5f132fb"
 metafile = true
