@@ -222,10 +222,10 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: "⬆️ Update mods (weekly automatic check)"
+          commit-message: "Update mods (weekly automatic check)"
           branch: auto-mod-update
           delete-branch: true
-          title: "🔄 Автоматическое обновление модов"
+          title: "Автоматическое обновление модов"
           body: ${{ steps.update.outputs.pr_body }}
           base: main
           labels: mod-update
