@@ -1,3 +1,8 @@
+### 26.2-1.4.0 (2026-06-18)
+# Add
+* Mod Menu
+* Text Placeholder API
+
 ### 26.2-1.3.0 (2026-06-18)
 # Add
 * Sodium Extra
