@@ -6,6 +6,11 @@ hash = "8e6033c2642308835d119a073fdf24306394cdb6985c482a08e67b8087f6e90d"
 metafile = true
 
 [[files]]
+file = "mods/borderless-fullscreen.pw.toml"
+hash = "a759a072e573902dfd0fe78a5004ba53dff806b9dc24ff3ce6f6b16a3c3bc7c7"
+metafile = true
+
+[[files]]
 file = "mods/c2me-fabric.pw.toml"
 hash = "47dba1cbfb60a9a2de63a5e6d7c23b85d7b9651e4cb1ab870f4261cd565e3c7d"
 metafile = true
@@ -41,6 +46,11 @@ hash = "a826eb5620b44f763365baedb22075293191abf82b94353252c936f1e5e45959"
 metafile = true
 
 [[files]]
+file = "mods/jamlib.pw.toml"
+hash = "a6b342a387653f2accd5d812b748fa71144de254ecfa706d6ec8b6ee7e1afefc"
+metafile = true
+
+[[files]]
 file = "mods/ksyxis.pw.toml"
 hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
 metafile = true
@@ -61,6 +71,11 @@ hash = "79f15a14bc21c8983fcb698a8682e26e3702e723be996abd69b6dd70edd4dd00"
 metafile = true
 
 [[files]]
+file = "mods/modmenu.pw.toml"
+hash = "42583eed7ccb599f10285e721c25bf3c8858ef7e0eb8e22aa8bf64a08d98a280"
+metafile = true
+
+[[files]]
 file = "mods/morechathistory.pw.toml"
 hash = "6d505173f3abc478d4d961dbb6ba6e2c9d94ef2481c9d41bf0ce6279e5f132fb"
 metafile = true
@@ -73,6 +88,21 @@ metafile = true
 [[files]]
 file = "mods/neotooltipfix.pw.toml"
 hash = "4ef0c642166b0a78db16ced094635c6a570ec6888ceb250f07012f1c84c33087"
+metafile = true
+
+[[files]]
+file = "mods/placeholder-api.pw.toml"
+hash = "d20369e5848ca31ecbb49bae22e953439173bd4617ca239b23335366b2a6a0e9"
+metafile = true
+
+[[files]]
+file = "mods/reeses-sodium-options.pw.toml"
+hash = "5df4a212f7297545920f3e69aa8a9b2e9df8dfad2e35c5a5fb1485c5a2b0ba84"
+metafile = true
+
+[[files]]
+file = "mods/rightclickharvest.pw.toml"
+hash = "e150f878c499420771611573124cb438b1b9d831bc86ef00c9e5e7afccbad5e9"
 metafile = true
 
 [[files]]

@@ -1,3 +1,12 @@
+### 26.1.2-1.1.0 (2026-06-20)
+# Add
+* Borderless Fullscreen
+* JamLib
+* Mod Menu
+* Placeholder API
+* Reese's Sodium Options
+* Right Click Harvest
+
 ### 26.2-1.4.0 (2026-06-18)
 # Add
 * Mod Menu
