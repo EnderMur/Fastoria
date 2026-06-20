@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/rrv/client_settings.json"
+hash = "bcc84a90038ea5ef81a391dc7b909e165ae8d4ed7ac18bc4c6b9d3616b9ba2f6"
+
+[[files]]
 file = "mods/badoptimizations.pw.toml"
 hash = "3635aff985b59e95eabf5ca9be77d20d25c9d4e2b20f97df42639ea794eda1f3"
 metafile = true
