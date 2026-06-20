@@ -51,6 +51,11 @@ hash = "7d09856050dae6f7406d22c28712303e4906c57c48b4f588e8bdeed680488a19"
 metafile = true
 
 [[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "1d5799cd3b6ea714602c18546b99ba894e7511835b77803304792468fb7ee187"
+metafile = true
+
+[[files]]
 file = "mods/ixeris.pw.toml"
 hash = "b638186285073f2daf8a133460fe9edeb576cb06f74e73f4fc2756607cf07110"
 metafile = true
