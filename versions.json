@@ -15,6 +15,10 @@
     {
       "name": "26.1.2",
       "supported": true
+    },
+    {
+      "name": "1.21.1",
+      "supported": true
     }
   ]
 }

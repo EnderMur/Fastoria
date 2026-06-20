@@ -1,0 +1,13 @@
+name = "Disable Fog"
+filename = "disablefog-fabric-1.21.1-2.2.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/PmLlAay9/versions/D4PGuqdK/disablefog-fabric-1.21.1-2.2.0.jar"
+hash-format = "sha512"
+hash = "5a6aac9ba811786d3936e1fa192974474b93a905111a65fe216bfa919e1fa905a33b9db8b5b983f4594b0ab19549eb4e0bf200e9276338fb323753dbfa25392e"
+
+[update]
+[update.modrinth]
+mod-id = "PmLlAay9"
+version = "D4PGuqdK"

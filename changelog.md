@@ -1,3 +1,6 @@
+### 1.21.1-1.0.0 (2026-06-20)
+First release.
+
 ### 26.1.2-1.1.0 (2026-06-20)
 # Add
 * Borderless Fullscreen

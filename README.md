@@ -29,6 +29,7 @@ Fastorio is a modpack specially designed for comfortable gameplay with a large n
 | `26.2-rc-1` | 🔴 | Release candidate, no longer supported |
 | `26.2-rc-2` | 🔴 | Release candidate, no longer supported |
 | `26.1.2` | 🟢 | Current stable version |
+| `1.21.1` | 🟢 | Current stable version |
 
 ## Installation
 
