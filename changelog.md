@@ -1,3 +1,11 @@
+### 26.2-1.4.2 (2026-06-21)
+# Add
+* Resourcepacks SodiumTranslations
+
+### 26.1.2-1.1.1 (2026-06-21)
+# Add
+* Resourcepacks SodiumTranslations
+
 ### 26.2-1.4.1 (2026-06-20)
 # Add
 * RRV config

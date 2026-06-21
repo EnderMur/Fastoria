@@ -1,4 +1,6 @@
 *.zip
+!modrinth/26.2/resourcepacks/SodiumTranslations.zip
+!modrinth/26.1.2/resourcepacks/SodiumTranslations.zip
 *.mrpack
 
 *.log

@@ -139,3 +139,7 @@ metafile = true
 file = "mods/xxl-packets.pw.toml"
 hash = "4569552c042289be27ec6efc416061304ef408398e54e2e9e800fe101422a1dd"
 metafile = true
+
+[[files]]
+file = "resourcepacks/SodiumTranslations.zip"
+hash = "319b15e7993bfa0e51a3a00e575bcabd166160dc097e3ec68f9d4006187437f8"
