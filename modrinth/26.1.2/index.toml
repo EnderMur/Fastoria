@@ -12,7 +12,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "47dba1cbfb60a9a2de63a5e6d7c23b85d7b9651e4cb1ab870f4261cd565e3c7d"
+hash = "ccdf15227c1495a2756b74b8b569a5028d3f30cd4f01b02ea1afa7bd2b0bf841"
 metafile = true
 
 [[files]]
@@ -22,7 +22,7 @@ metafile = true
 
 [[files]]
 file = "mods/clientsort.pw.toml"
-hash = "fff459aa49075067b7b84f3ceafa5271073fa4c22683e9df89f5896ba0f66391"
+hash = "c850b93fb0fd8e21fc214a7b0aaf5c1b60b1f8e6d1eac0c7343b63b46b8fb317"
 metafile = true
 
 [[files]]
@@ -72,7 +72,7 @@ metafile = true
 
 [[files]]
 file = "mods/modernfix-mvus.pw.toml"
-hash = "79f15a14bc21c8983fcb698a8682e26e3702e723be996abd69b6dd70edd4dd00"
+hash = "2e531dae9197fea52cc553bc6756544c1f4664784874741110294be2fd975fd6"
 metafile = true
 
 [[files]]
@@ -102,7 +102,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "5df4a212f7297545920f3e69aa8a9b2e9df8dfad2e35c5a5fb1485c5a2b0ba84"
+hash = "18bc9f3ebf87819c0846c1af64ba6e8a6f5a56f038b4b2c9888ade3cb9d93263"
 metafile = true
 
 [[files]]
@@ -112,7 +112,7 @@ metafile = true
 
 [[files]]
 file = "mods/rrv.pw.toml"
-hash = "95260879087a49630240cc2e8eb3d4983a80cc09cbd68fb751daf02718cabb9d"
+hash = "8660da4f20062f6f31cd832896cefbf8eba1c85fa0c52e40e64f518f731c3ea3"
 metafile = true
 
 [[files]]
