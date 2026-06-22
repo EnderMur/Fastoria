@@ -72,7 +72,7 @@ metafile = true
 
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
-hash = "e2743788609a0cd12f6fa71181525116c2033d17fc050ea2cafb07e2547c742a"
+hash = "b85d562b35f68cdbb0f79bbdebc11cb938002c727d9f982ed5743c8488c74ac7"
 metafile = true
 
 [[files]]
@@ -107,7 +107,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "16dbcc0591b503eb3b92c4808910bd059d5bf30a233a333116614058dbcf333c"
+hash = "014b0ad28deeba176a419a4cb60a88827e460cd81201def65d630f83ddae5997"
 metafile = true
 
 [[files]]
