@@ -10,11 +10,6 @@ hash = "3635aff985b59e95eabf5ca9be77d20d25c9d4e2b20f97df42639ea794eda1f3"
 metafile = true
 
 [[files]]
-file = "mods/borderless-fullscreen.pw.toml"
-hash = "b621ff490dadb4501f754e14d4d5d72ac1ac4fedb04c895b18afe0fe5ad90167"
-metafile = true
-
-[[files]]
 file = "mods/c2me-fabric.pw.toml"
 hash = "afe516a4d1466e8f0f0764264f14ace2e7a2df77d0c63b11393d671254514357"
 metafile = true
@@ -27,6 +22,11 @@ metafile = true
 [[files]]
 file = "mods/clientsort.pw.toml"
 hash = "57d296f832dc606a59ebf4a6df3abcd3c33aae77938067476475d50e5efb6e6c"
+metafile = true
+
+[[files]]
+file = "mods/cubes-without-borders.pw.toml"
+hash = "ba10e235a3e4baac4862bb74a9b8b2fe7d4f2465620255195fb661a5e9c968d7"
 metafile = true
 
 [[files]]
