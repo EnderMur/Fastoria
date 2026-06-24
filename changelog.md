@@ -1,3 +1,6 @@
+### 26.3-snapshot-1-1.0.0 (2026-06-24)
+First release.
+
 ### 1.21.1-1.0.1 (2026-06-21)
 # Update
 * LambDynamicLights - Dynamic Lights (lambdynamiclights-4.8.9+1.21.1.jar -> lambdynamiclights-4.8.10+1.21.1.jar)

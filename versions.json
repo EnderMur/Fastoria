@@ -1,6 +1,10 @@
 {
   "versions": [
     {
+      "name": "26.3-snapshot-1",
+      "supported": true
+    },
+    {
       "name": "26.2",
       "supported": true
     },
