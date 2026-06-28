@@ -1,3 +1,28 @@
+### 1.21.1-1.0.2 (2026-06-28)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc1.21.1-0.3.0+alpha.0.364.jar -> c2me-fabric-mc1.21.1-0.4.0-alpha.0.16.jar)
+* Ixeris (Ixeris-4.5.0+1.21.1-fabric.jar -> Ixeris-4.5.1+1.21.1-fabric.jar)
+* Lithium (lithium-fabric-0.15.3+mc1.21.1.jar -> lithium-fabric-0.15.4+mc1.21.1.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc1.21.1.jar -> reeses-sodium-options-fabric-2.2.0+mc1.21.1.jar)
+* Sodium (sodium-fabric-0.8.12-beta.1+mc1.21.1.jar -> sodium-fabric-0.8.12-beta.2+mc1.21.1.jar)
+
+### 26.1.2-1.1.3 (2026-06-28)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.1.2-0.4.0-alpha.0.17.jar -> c2me-fabric-mc26.1.2-0.4.0-alpha.0.28.jar)
+* Fabric API (fabric-api-0.152.1+26.1.2.jar -> fabric-api-0.153.0+26.1.2.jar)
+* Ixeris (Ixeris-4.5.0+26.1.2-fabric.jar -> Ixeris-4.5.1+26.1.2-fabric.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc26.1.2.jar -> reeses-sodium-options-fabric-2.2.0+mc26.1.2.jar)
+* Sodium (sodium-fabric-0.9.0-beta.1+mc26.1.2.jar -> sodium-fabric-0.9.1-beta.2+mc26.1.2.jar)
+
+### 26.2-1.4.4 (2026-06-28)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.2-0.4.1-alpha.0.9.jar -> c2me-fabric-mc26.2-0.4.2-alpha.0.9.jar)
+* Fabric API (fabric-api-0.152.2+26.2.jar -> fabric-api-0.153.0+26.2.jar)
+* Ixeris (Ixeris-4.5.0+26.2-fabric.jar -> Ixeris-4.5.1+26.2-fabric.jar)
+* Lithium (lithium-fabric-0.25.0+mc26.2.jar -> lithium-fabric-0.25.1+mc26.2.jar)
+* Mod Menu (modmenu-20.0.0-beta.3.jar -> modmenu-20.0.0-beta.4.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc26.2.jar -> reeses-sodium-options-fabric-2.2.0+mc26.2.jar)
+* Sodium (sodium-fabric-0.9.0+mc26.2.jar -> sodium-fabric-0.9.1-beta.2+mc26.2.jar)
 ### 26.3-snapshot-1-1.0.0 (2026-06-24)
 First release.
 
