@@ -7,12 +7,12 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "1c1c3a61def2457f763def4594a93c5430c03bc2069e3ada5eb56ef59a9ddb1d"
+hash = "d14442b36c50af1c2a1babe4243099d3949430fec2a4149c1a6d4ab99ce95cd0"
 metafile = true
 
 [[files]]
 file = "mods/modernfix-mvus.pw.toml"
-hash = "d24165666316cb882d0769bed0d11fe400731f41949992080afc4bd8b6ad9ad4"
+hash = "46609a55eafa7a2b4bf00f5a881c77fe3f0a520bbfb4ad75f5a5196bcea6f39b"
 metafile = true
 
 [[files]]
@@ -22,5 +22,5 @@ metafile = true
 
 [[files]]
 file = "mods/zfastnoise.pw.toml"
-hash = "f00174459fbd6453d56a9d9c30e257f48b7adfaffa68886dec541b16847de45a"
+hash = "657ec98f1acca0d6ad9e5a301ecba54cfa66a3f87423f90cbfe359db75abd9f0"
 metafile = true
