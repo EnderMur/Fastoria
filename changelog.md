@@ -4,8 +4,12 @@
 ### 26.3-snapshot-2-1.0.0 (2026-07-01)
 * First release.
 
+### 26.3-snapshot-1-1.0.1 (2026-06-24)
+# Fix
+* Add Fabric Api
+
 ### 26.3-snapshot-1-1.0.0 (2026-06-24)
-First release.
+* First release.
 
 ### 1.21.1-1.0.1 (2026-06-21)
 # Update
