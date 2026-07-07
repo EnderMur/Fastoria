@@ -1,3 +1,52 @@
+### 1.21.1-1.0.2 (2026-07-07)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc1.21.1-0.3.0+alpha.0.364.jar -> c2me-fabric-mc1.21.1-0.4.0-alpha.0.19.jar)
+* Fabric API (fabric-api-0.116.12+1.21.1.jar -> fabric-api-0.116.13+1.21.1.jar)
+* Ixeris (Ixeris-4.5.0+1.21.1-fabric.jar -> Ixeris-4.5.2+1.21.1-fabric.jar)
+* Lithium (lithium-fabric-0.15.3+mc1.21.1.jar -> lithium-fabric-0.15.4+mc1.21.1.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc1.21.1.jar -> reeses-sodium-options-fabric-2.2.2+mc1.21.1.jar)
+* Sodium (sodium-fabric-0.8.12-beta.1+mc1.21.1.jar -> sodium-fabric-0.8.12+mc1.21.1.jar)
+* Sodium Extra (sodium-extra-fabric-0.8.7+mc1.21.1.jar -> sodium-extra-fabric-0.9.1+mc1.21.1.jar)
+
+### 26.1.2-1.1.3 (2026-07-07)
+# Update
+* ClickThrough Plus (clickthrough-plus-3.6.4+26.1.1-fabric.jar -> clickthrough-plus-3.6.5+26.1.2-fabric.jar)
+* Client Sort (clientsort-fabric-3.102.4+26.1.2.jar -> clientsort-fabric-3.102.5+26.1.2.jar)
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.1.2-0.4.0-alpha.0.17.jar -> c2me-fabric-mc26.1.2-0.4.0-alpha.0.31.jar)
+* Fabric API (fabric-api-0.152.1+26.1.2.jar -> fabric-api-0.154.2+26.1.2.jar)
+* Ixeris (Ixeris-4.5.0+26.1.2-fabric.jar -> Ixeris-4.5.2+26.1.2-fabric.jar)
+* ModernFix-mVUS (modernfix-5.27.17-build.2.jar -> modernfix-5.27.19-build.1.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc26.1.2.jar -> reeses-sodium-options-fabric-2.2.2+mc26.1.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.4.0+26.1.2-fabric.jar -> reliable-recipe-viewer-8.4.2+26.1.2-fabric.jar)
+* ScalableLux (ScalableLux-0.2.0+fabric.2b63825-all.jar -> ScalableLux-fabric-0.3.0-alpha.0.1-all.jar)
+* Sodium (sodium-fabric-0.9.0-beta.1+mc26.1.2.jar -> sodium-fabric-0.9.1-beta.4+mc26.1.2.jar)
+* Sodium Extra (sodium-extra-fabric-0.8.7+mc26.1.1.jar -> sodium-extra-fabric-0.9.1+mc26.1.2.jar)
+
+### 26.2-1.4.4 (2026-07-07)
+# Update
+* ClickThrough Plus (clickthrough-plus-3.6.4+26.1.1-fabric.jar -> clickthrough-plus-3.6.5+26.1.2-fabric.jar)
+* Client Sort (clientsort-fabric-3.103.0+26.2.jar -> clientsort-fabric-3.103.1+26.2.jar)
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.2-0.4.1-alpha.0.9.jar -> c2me-fabric-mc26.2-0.4.2-alpha.0.12.jar)
+* Fabric API (fabric-api-0.152.2+26.2.jar -> fabric-api-0.154.2+26.2.jar)
+* Ixeris (Ixeris-4.5.0+26.2-fabric.jar -> Ixeris-4.5.2+26.2-fabric.jar)
+* Lithium (lithium-fabric-0.25.0+mc26.2.jar -> lithium-fabric-0.25.1+mc26.2.jar)
+* Mod Menu (modmenu-20.0.0-beta.3.jar -> modmenu-20.0.0-beta.4.jar)
+* ModernFix-mVUS (modernfix-5.27.18-build.1.jar -> modernfix-5.27.19-build.1.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.1.0+mc26.2.jar -> reeses-sodium-options-fabric-2.2.2+mc26.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.4.0+26.2-fabric.jar -> reliable-recipe-viewer-8.4.2+26.2-fabric.jar)
+* ScalableLux (ScalableLux-0.2.1+fabric.2b08348-all.jar -> ScalableLux-fabric-0.3.0-alpha.0.2-all.jar)
+* Sodium (sodium-fabric-0.9.0+mc26.2.jar -> sodium-fabric-0.9.1-beta.4+mc26.2.jar)
+* Sodium Extra (sodium-extra-fabric-0.8.9+mc26.2.jar -> sodium-extra-fabric-0.9.1+mc26.2.jar)
+
+### 26.3-snapshot-1-1.0.2 (2026-07-07)
+# Update
+* Fast Noise (zfastnoise-1.0.36+26.3-snapshot-1.jar -> zfastnoise-1.0.37+26.3-snapshot-1.jar)
+
+### 26.3-snapshot-2-1.0.1 (2026-07-07)
+# Update
+* Fabric API (fabric-api-0.153.2+26.3.jar -> fabric-api-0.154.2+26.3.jar)
+* Fast Noise (zfastnoise-1.0.37+26.3-snapshot-2.jar -> zfastnoise-1.0.38+26.3-snapshot-2.jar)
+* ModernFix-mVUS (modernfix-5.27.18-build.1.jar -> modernfix-5.27.19-build.1.jar)
 ### 26.3-snapshot-3-1.0.0 (2026-07-07)
 * First release.
 
