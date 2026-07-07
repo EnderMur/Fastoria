@@ -1,3 +1,6 @@
+### 26.3-snapshot-3-1.0.0 (2026-07-07)
+* First release.
+
 ### 26.3-snapshot-2-1.0.0 (2026-07-01)
 * First release.
 
