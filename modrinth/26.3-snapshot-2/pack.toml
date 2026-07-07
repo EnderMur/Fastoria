@@ -1,0 +1,13 @@
+name = "Fastoria"
+author = "Alisik"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "0c490806bf3674551bb164ff02c595d8b7b93aeab97f8614d7d58d31af16d5c0"
+
+[versions]
+fabric = "0.19.3"
+minecraft = "26.3-snapshot-2"

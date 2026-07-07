@@ -1,0 +1,26 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "57273d5ec1e7603702d4114bbec85e43a2084728a85bdb67c5933c816692a9de"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "1c1c3a61def2457f763def4594a93c5430c03bc2069e3ada5eb56ef59a9ddb1d"
+metafile = true
+
+[[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "d24165666316cb882d0769bed0d11fe400731f41949992080afc4bd8b6ad9ad4"
+metafile = true
+
+[[files]]
+file = "mods/wi-zoom.pw.toml"
+hash = "851637d9b5f4c596d7f26754f6e39be5beff9416e505c57506847ba7e40aa37b"
+metafile = true
+
+[[files]]
+file = "mods/zfastnoise.pw.toml"
+hash = "f00174459fbd6453d56a9d9c30e257f48b7adfaffa68886dec541b16847de45a"
+metafile = true
