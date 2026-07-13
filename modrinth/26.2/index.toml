@@ -11,7 +11,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "951f09d189fbcf17b4cde0524e9cd1e37da9a3c666fa47606ca61b55ec1c287e"
+hash = "159b583e8e5fa6934327438d3eb072777617bb1862c59f816ae9806e6d53e14b"
 metafile = true
 
 [[files]]
@@ -71,7 +71,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "d655305d7933a11ed9c0c8edb57868c053b9c995c121c00b47061cf0e098c92a"
+hash = "b7e98520b66f5a11f8a4ad84e518de34d97d1ca84152f3a427d9e7820299fbdd"
 metafile = true
 
 [[files]]
@@ -81,7 +81,7 @@ metafile = true
 
 [[files]]
 file = "mods/modmenu.pw.toml"
-hash = "7acfb9e9d7b052728f518574f1e79d20a2ec3296e147fbd3794b033fef381947"
+hash = "9ceb72b7c586df8828ee5e9eaf096c913f8debe92805cd5ce6c4ea8922e5fe1d"
 metafile = true
 
 [[files]]
@@ -106,7 +106,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "3e203bfd412cb6c7c9eccbb621edc24427174afbbe739bff98cf1b51f0636333"
+hash = "a4c435e9a1f73fc2bc34b144e582c2e019d0a3eec99925ddd2aaae727370ea76"
 metafile = true
 
 [[files]]
@@ -116,22 +116,22 @@ metafile = true
 
 [[files]]
 file = "mods/rrv.pw.toml"
-hash = "b88f940ac5c80746ad2349ab19da5ecb1f266cc533cf1577dd172b29d485ddc3"
+hash = "73f9d9fdda82ad8d7ad7e537f8251b7fbcd8e59663a7c620a15f5979d2af2128"
 metafile = true
 
 [[files]]
 file = "mods/scalablelux.pw.toml"
-hash = "3392508587c2cc0bf99ba82fcb02936d0d8d636537237d6aa12ae30cb03c4522"
+hash = "fda2f23dc5a311460c9a277922fbb94ccfd6adbde2b74cc395a467f51523b90f"
 metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "f59459557165e5ed9022cd5e9182bd3b12ae495e9c300bf9025d03a76eca9fe1"
+hash = "23bd2f19c11a1b0b2870dafd6d5321af3549b22e84149bfd6ff3ff49af388788"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "9c0841e3426cc58863e4c883f191329334940827d87615fd7c7484547861d867"
+hash = "a899b14d4bbab643586ac2734da162e9cae579d461f81776804c598a03297ebe"
 metafile = true
 
 [[files]]

@@ -1,3 +1,34 @@
+### 1.21.1-1.0.3 (2026-07-13)
+# Update
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.2.2+mc1.21.1.jar -> reeses-sodium-options-fabric-2.2.3+mc1.21.1.jar)
+* ScalableLux (ScalableLux-0.1.0.1+fabric.d0d58ab-all.jar -> ScalableLux-fabric-0.3.0-alpha.0.5-all.jar)
+* Sodium Extra (sodium-extra-fabric-0.9.1+mc1.21.1.jar -> sodium-extra-fabric-0.9.3+mc1.21.1.jar)
+
+### 26.1.2-1.1.4 (2026-07-13)
+# Update
+* Borderless Fullscreen (BorderlessFullscreen-v2.4.1-mc26.1.2.jar -> BorderlessFullscreen-v2.4.1_01-mc26.1.2.jar)
+* Mod Menu (modmenu-18.0.0-beta.1.jar -> modmenu-18.0.0.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.2.2+mc26.1.2.jar -> reeses-sodium-options-fabric-2.2.3+mc26.1.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.4.2+26.1.2-fabric.jar -> reliable-recipe-viewer-8.6.1+26.1.2-fabric.jar)
+* ScalableLux (ScalableLux-fabric-0.3.0-alpha.0.1-all.jar -> ScalableLux-fabric-0.3.0-alpha.0.2-all.jar)
+* Sodium (sodium-fabric-0.9.1-beta.4+mc26.1.2.jar -> sodium-fabric-0.9.1+mc26.1.2.jar)
+* Sodium Extra (sodium-extra-fabric-0.9.1+mc26.1.2.jar -> sodium-extra-fabric-0.9.3+mc26.1.2.jar)
+
+### 26.2-1.4.5 (2026-07-13)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.2-0.4.2-alpha.0.12.jar -> c2me-fabric-mc26.2-0.4.2-alpha.0.13.jar)
+* Lithium (lithium-fabric-0.25.1+mc26.2.jar -> lithium-fabric-0.25.2+mc26.2.jar)
+* Mod Menu (modmenu-20.0.0-beta.4.jar -> modmenu-20.0.1.jar)
+* Reese's Sodium Options (reeses-sodium-options-fabric-2.2.2+mc26.2.jar -> reeses-sodium-options-fabric-2.2.3+mc26.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.4.2+26.2-fabric.jar -> reliable-recipe-viewer-8.6.1+26.2-fabric.jar)
+* ScalableLux (ScalableLux-fabric-0.3.0-alpha.0.2-all.jar -> ScalableLux-fabric-0.3.0-alpha.0.3-all.jar)
+* Sodium (sodium-fabric-0.9.1-beta.4+mc26.2.jar -> sodium-fabric-0.9.1+mc26.2.jar)
+* Sodium Extra (sodium-extra-fabric-0.9.1+mc26.2.jar -> sodium-extra-fabric-0.9.3+mc26.2.jar)
+
+### 26.3-snapshot-3-1.0.1 (2026-07-13)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.3-snapshot-3-0.4.2-alpha.0.15.jar -> c2me-fabric-mc26.3-snapshot-3-0.4.2-alpha.0.20.jar)
+* Fast Noise (zfastnoise-1.0.38+26.3-snapshot-3.jar -> zfastnoise-1.0.39+26.3-snapshot-3.jar)
 ### 1.21.1-1.0.2 (2026-07-07)
 # Update
 * Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc1.21.1-0.3.0+alpha.0.364.jar -> c2me-fabric-mc1.21.1-0.4.0-alpha.0.19.jar)
