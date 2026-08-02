@@ -12,7 +12,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "13d5ac69013ba40f8265a5aa31050f2f910d9f3a07495d26325dd9b34b75c962"
+hash = "032ed9d0cfe4b7b964a56d149a5d2487f6a77d5a5a2e47857bc25400a0619903"
 metafile = true
 
 [[files]]
@@ -32,12 +32,12 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "3dda058a34855fad435a3882adc0af253b5a3e0212349ab882bddc7155d34c86"
+hash = "fed9bdaac0173f3cab2692f538441afda1e2cd46c6f6363790b424c009e34e03"
 metafile = true
 
 [[files]]
 file = "mods/fastserverpings.pw.toml"
-hash = "9db8aecc12a2e2109fc35b1ca6e2cf93bc5ea1055d2715ba3bf00adad0a53d04"
+hash = "74d3113f8c185aa690c79fa1b5566b4f1c6da984363b03dab0d34e7cc4146176"
 metafile = true
 
 [[files]]
@@ -47,7 +47,7 @@ metafile = true
 
 [[files]]
 file = "mods/ixeris.pw.toml"
-hash = "f5bcb1eabd56bca59f89b7bee032562ba2d5da42f564a477cfebc48d85a9425b"
+hash = "0b22df49fcf0db824a0b436315101eb0042cdbbf70f2679a6f53ab011e83eb2c"
 metafile = true
 
 [[files]]
@@ -67,7 +67,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "cd37520fbb14b8d5e9471d8c25324736e02dcf3be4b7c5df1699757b2264049f"
+hash = "ff3b8e19820888b63a129f5c5769a1671bda1e1376de0deb216c6862f0feca2d"
 metafile = true
 
 [[files]]
@@ -112,7 +112,7 @@ metafile = true
 
 [[files]]
 file = "mods/rrv.pw.toml"
-hash = "fbd0bfe9eb0612bd2e383803b41575ed43af15d819b38a0b31b645932ee319b3"
+hash = "1b5e16e65695809e2d4036fb2af36132917134bd34f738afccccf63e18bcc36d"
 metafile = true
 
 [[files]]
@@ -127,7 +127,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "c75f5e9a285cf6195065ba85e73081990f990de6efc7e2262a6eafe12d3dc277"
+hash = "29d554075cdcdff3a9708bd937672874989247d5275d2be3c8938295ce87bfdd"
 metafile = true
 
 [[files]]

@@ -1,3 +1,34 @@
+### 1.21.1-1.0.4 (2026-08-02)
+# Update
+* Architectury API (architectury-13.0.8-fabric.jar -> architectury-13.0.11-fabric.jar)
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc1.21.1-0.4.0-alpha.0.19.jar -> c2me-fabric-mc1.21.1-0.4.0-alpha.0.23.jar)
+* Fabric API (fabric-api-0.116.13+1.21.1.jar -> fabric-api-0.116.15+1.21.1.jar)
+* Ixeris (Ixeris-4.5.2+1.21.1-fabric.jar -> Ixeris-4.6.2+1.21.1-fabric.jar)
+* Sodium (sodium-fabric-0.8.12+mc1.21.1.jar -> sodium-fabric-0.8.13-beta.1+mc1.21.1.jar)
+
+### 26.1.2-1.1.5 (2026-08-02)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.1.2-0.4.0-alpha.0.31.jar -> c2me-fabric-mc26.1.2-0.4.0-alpha.0.44.jar)
+* Fabric API (fabric-api-0.154.2+26.1.2.jar -> fabric-api-0.155.2+26.1.2.jar)
+* Fast Server Pings (FastServerPings-1.1.1+26.2.jar -> FastServerPings-1.1.4+26.3.jar)
+* Ixeris (Ixeris-4.5.2+26.1.2-fabric.jar -> Ixeris-4.6.2+26.1.2-fabric.jar)
+* Lithium (lithium-fabric-0.24.6+mc26.1.2.jar -> lithium-fabric-0.24.7+mc26.1.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.6.1+26.1.2-fabric.jar -> reliable-recipe-viewer-8.6.4+26.1.2-fabric.jar)
+* Sodium (sodium-fabric-0.9.1+mc26.1.2.jar -> sodium-fabric-0.9.2-alpha.3+mc26.1.2.jar)
+
+### 26.2-1.4.6 (2026-08-02)
+# Update
+* Concurrent Chunk Management Engine (Fabric) (c2me-fabric-mc26.2-0.4.2-alpha.0.13.jar -> c2me-fabric-mc26.2-0.4.2-alpha.0.34.jar)
+* Fabric API (fabric-api-0.154.2+26.2.jar -> fabric-api-0.156.0+26.2.jar)
+* Fast Server Pings (FastServerPings-1.1.1+26.2.jar -> FastServerPings-1.1.4+26.3.jar)
+* Ixeris (Ixeris-4.5.2+26.2-fabric.jar -> Ixeris-4.6.2+26.2-fabric.jar)
+* Lithium (lithium-fabric-0.25.2+mc26.2.jar -> lithium-fabric-0.25.3+mc26.2.jar)
+* Reliable Recipe Viewer (reliable-recipe-viewer-8.6.1+26.2-fabric.jar -> reliable-recipe-viewer-8.6.4+26.2-fabric.jar)
+* Sodium (sodium-fabric-0.9.1+mc26.2.jar -> sodium-fabric-0.9.2-alpha.3+mc26.2.jar)
+
+### 26.3-snapshot-3-1.0.2 (2026-08-02)
+# Update
+* Fabric API (fabric-api-0.154.3+26.3.jar -> fabric-api-0.155.0+26.3.jar)
 ### 1.21.1-1.0.3 (2026-07-13)
 # Update
 * Reese's Sodium Options (reeses-sodium-options-fabric-2.2.2+mc1.21.1.jar -> reeses-sodium-options-fabric-2.2.3+mc1.21.1.jar)

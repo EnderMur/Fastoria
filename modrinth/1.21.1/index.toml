@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "1102440dd2533ba3a154419bb95ff1f81b858201eb0c44d2a2eea486c74e565a"
+hash = "0fb3808193da9b587367337d12d202d7b006e2522637a6502913d66a84f8626f"
 metafile = true
 
 [[files]]
@@ -17,7 +17,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "c836c53156b6f13fbc3fa3d1d6456f19685c61a43d595170debd5e534ceac294"
+hash = "15b44f72536a7b33c67347ea3f1a1357a431c13392439bdc99e7ebc75c31d735"
 metafile = true
 
 [[files]]
@@ -42,7 +42,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "40b692927ec3a10fc8b456e2deca2ae45d190e67baabc53758c839729a3f86c7"
+hash = "0f6ef76068ccf1e3607722151921861e27783c6951b2e7a724eccce3951d6447"
 metafile = true
 
 [[files]]
@@ -57,7 +57,7 @@ metafile = true
 
 [[files]]
 file = "mods/ixeris.pw.toml"
-hash = "4f455a65a5328ca3ac068bd09d4d9f66b38f2f33aef9a084b7e7915df79d32b7"
+hash = "e5d035987cbb9668547b33c62953f0453450f3cf9bee25ea04a7cd9c5e9315ad"
 metafile = true
 
 [[files]]
@@ -132,7 +132,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "311d23361c153f7adcad260255fe3b2062f1c8e67c75ee088e0b61855e9d9134"
+hash = "3e0c8e0e78ced5db1703fa1ce676c23db352a0bff68789ccda99edd899751ec1"
 metafile = true
 
 [[files]]
