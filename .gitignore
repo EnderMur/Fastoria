@@ -17,4 +17,6 @@ instances/
 .DS_Store
 Thumbs.db
 
+.fastoria_cli/
+
 *.tmp

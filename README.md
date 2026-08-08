@@ -3,6 +3,8 @@
 [![GitHub][img-github]][url-github]
 [![Modrinth][img-modrinth]][url-modrinth]
 
+🌐 **Language:** [English](README.md) | [Русский](README.ru.md)
+
 Fastorio is a modpack specially designed for comfortable gameplay with a large number of mods while maintaining high FPS and minimal lag even during long sessions.
 
 ## Key Features
@@ -23,16 +25,16 @@ Fastorio is a modpack specially designed for comfortable gameplay with a large n
 
 ## Version Support
 
-| Version | Supported | Notes |
-|---------|-----------|-------|
-| `26.3-snapshot-3` | 🟢 | Current stable version |
-| `26.3-snapshot-2` | 🟢 | Current stable version |
-| `26.3-snapshot-1` | 🟢 | Current stable version |
-| `26.2` | 🟢 | Current stable version |
-| `26.2-rc-1` | 🔴 | Release candidate, no longer supported |
-| `26.2-rc-2` | 🔴 | Release candidate, no longer supported |
-| `26.1.2` | 🟢 | Current stable version |
-| `1.21.1` | 🟡 | Only update |
+| Version              | Status                          | Notes               |
+|----------------------|---------------------------------|---------------------|
+| `26.2`               | ![Supported][badge-supported]   | Current stable      |
+| `26.1.2`             | ![Supported][badge-supported]   | Current stable      |
+| `1.21.1`             | ![Supported][badge-supported]   | Current stable      |
+| `26.3-snapshot-3`    | ![Unsupported][badge-unsupported] | No longer supported |
+| `26.3-snapshot-2`    | ![Unsupported][badge-unsupported] | No longer supported |
+| `26.3-snapshot-1`    | ![Unsupported][badge-unsupported] | No longer supported |
+| `26.2-rc-2`          | ![Unsupported][badge-unsupported] | No longer supported |
+| `26.2-rc-1`          | ![Unsupported][badge-unsupported] | No longer supported |
 
 ## Installation
 
@@ -48,3 +50,7 @@ Fastorio is a modpack specially designed for comfortable gameplay with a large n
 <!-- URLs -->
 [url-github]: https://github.com/EnderMur/Fastoria/releases
 [url-modrinth]: https://modrinth.com/modpack/fastoria
+
+<!-- Status badges -->
+[badge-supported]: https://img.shields.io/badge/status-Supported-brightgreen
+[badge-unsupported]: https://img.shields.io/badge/status-Unsupported-red
