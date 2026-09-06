@@ -1,12 +1,12 @@
 name = "Fastoria"
 author = "Alisik"
-version = "1.4.5"
+version = "1.4.6"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "1d179499d30a3302cf387ba49580c6c7800aa8572ff362f5c7f655f8cdefc03a"
+hash = "e5c6a6ff2ab80b688f2b908a1076c1f98f27d6a426c9cb13f96406a73fbf890a"
 
 [versions]
 fabric = "0.19.3"
