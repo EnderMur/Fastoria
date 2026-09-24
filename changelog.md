@@ -1,3 +1,9 @@
+### 26.3-1.0.1 (2026-09-24)
+* Fixed startup error, build starts correctly
+
+### 26.3-1.0.0 (2026-09-24)
+* First release.
+
 ### 1.21.1-1.0.3 (2026-07-13)
 # Update
 * Reese's Sodium Options (reeses-sodium-options-fabric-2.2.2+mc1.21.1.jar -> reeses-sodium-options-fabric-2.2.3+mc1.21.1.jar)

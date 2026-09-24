@@ -1,0 +1,135 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/badoptimizations.pw.toml"
+hash = "fab0f8da4e12ee8f400a8f8a95619dc3aa6881ea0821a25f5cc6f2c77ecacf45"
+metafile = true
+
+[[files]]
+file = "mods/borderless-fullscreen.pw.toml"
+hash = "f15d22ac2dfeee35e5c03b5f3cbb22e89bed03b62b1c7b1e02b4f57436e7d6a4"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "8ba9eca8ecfc65ba84a33c320f993eab6a3514d5366385d4222499e5101311d9"
+metafile = true
+
+[[files]]
+file = "mods/clickthrough+.pw.toml"
+hash = "a8fa9c7ac67dfd19ca516ab51560ca17c1fc3630bd41e3853e07080bf5b53d3d"
+metafile = true
+
+[[files]]
+file = "mods/clientsort.pw.toml"
+hash = "f714e7bae0b484f853d9d881ea65ca81e15e0b95937fcb27e20a82c4326633b4"
+metafile = true
+
+[[files]]
+file = "mods/disable-fog.pw.toml"
+hash = "2062a640689f43995b3eec33e8c4ceb611900f1233d7d66384b8d7edf4ec4109"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "6b342a83e9736f0832e750c8d631273cf600305d73b32c8bd6a977811f6972ee"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
+metafile = true
+
+[[files]]
+file = "mods/ixeris.pw.toml"
+hash = "af1aa288455f8d8e4ce04e4bc8b06e2a9d1a6d833dfc83465ecaa7b0558d95b8"
+metafile = true
+
+[[files]]
+file = "mods/jamlib.pw.toml"
+hash = "8605f25c98a6c59048affef9c5af079cf09184e7f3f1bd60c75be86be3e6d244"
+metafile = true
+
+[[files]]
+file = "mods/ksyxis.pw.toml"
+hash = "0a2743a8260919d86c2bfc6a98ce78077f288cabf1eb5101766de59a64090d86"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
+hash = "1bcd8fa2d0c2c3390361736420236c2a5331002ae36bb5cba5a062b8708b5ee9"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "d68f9ad500e062c1e3b59f25bf72416e579d18d836b104f2712464298932eca7"
+metafile = true
+
+[[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "4d46615697276151aa0c7403f8368d467cb7dd12b040659b67bd34364d0f9780"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "cd05db76d670773ace1184abdd46126e7b7c75c2b70da82e1764cff9544c4269"
+metafile = true
+
+[[files]]
+file = "mods/morechathistory.pw.toml"
+hash = "6d505173f3abc478d4d961dbb6ba6e2c9d94ef2481c9d41bf0ce6279e5f132fb"
+metafile = true
+
+[[files]]
+file = "mods/mouse-tweaks.pw.toml"
+hash = "d9f809b321cdd117600e45f92215c8e750ed0b65641c18d394bb4c111019581d"
+metafile = true
+
+[[files]]
+file = "mods/neotooltipfix.pw.toml"
+hash = "faefdf863a4340d79191d4375ce189925f8c977531518ad649eac0868c90bb4f"
+metafile = true
+
+[[files]]
+file = "mods/placeholder-api.pw.toml"
+hash = "4d3d2ad41a037af6f78e2a6c2908c4098bb0b5c03ad0d2711a0c0c6df5e7a172"
+metafile = true
+
+[[files]]
+file = "mods/reeses-sodium-options.pw.toml"
+hash = "1afa2f6df06fae8266b3548f7cc5517537a6b2f06797da4e614efda461f090c2"
+metafile = true
+
+[[files]]
+file = "mods/rightclickharvest.pw.toml"
+hash = "e5ade44d9469df6cb42c90c54da12658859f75a6f23c086ba2d9d9d8c8a94ddf"
+metafile = true
+
+[[files]]
+file = "mods/rrv.pw.toml"
+hash = "6cdb5ef443657769f5fd1589e178087d800e6f766ba8aca8c4e3f7c4d9dbb1b0"
+metafile = true
+
+[[files]]
+file = "mods/scalablelux.pw.toml"
+hash = "8ab8d9da45456dfc8146a7d4b4b4243c69ba5b4375d086f361bf23df6e14988a"
+metafile = true
+
+[[files]]
+file = "mods/sodium-extra.pw.toml"
+hash = "69d683554d0db2dc59ce9ed08b28743ddb56d9ea12b80e52e43051d082987bd2"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "54d699d9ba85bb08b9fd3696a11c7449ea1175a118805855143e1c88fa54aa6b"
+metafile = true
+
+[[files]]
+file = "mods/xxl-packets.pw.toml"
+hash = "4569552c042289be27ec6efc416061304ef408398e54e2e9e800fe101422a1dd"
+metafile = true
+
+[[files]]
+file = "resourcepacks/SodiumTranslations.zip"
+hash = "921b2547d9ebd15ad93a0ba06b1f0dd842d87a75577fe6cee683c1afa3d40daa"
