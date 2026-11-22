@@ -1,13 +1,13 @@
 name = "Disable Fog"
-filename = "disablefog-fabric-26.3-2.2.1.jar"
+filename = "disablefog-fabric-26.3-2.3.0-beta.1.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/PmLlAay9/versions/eGXBoiR4/disablefog-fabric-26.3-2.2.1.jar"
+url = "https://cdn.modrinth.com/data/PmLlAay9/versions/ekNsdgOF/disablefog-fabric-26.3-2.3.0-beta.1.jar"
 hash-format = "sha512"
-hash = "f9c1452bf4929031e2e060248cbe6d20778a75c9d0bf06382ef74c08978eae95139ac78e500f84f0a00fcc442229e53c9616b12a48471f19ab71abd6db5b4f14"
+hash = "76d4c5a54d8b63bb1e63a6c76324084849ef2e8830e421174f8595ab6c32c2b1dbe08acaf2205feb7951a4b9c78799d3a969ce7f6186cd99f0a1b1c63c691791"
 
 [update]
 [update.modrinth]
 mod-id = "PmLlAay9"
-version = "eGXBoiR4"
+version = "ekNsdgOF"
